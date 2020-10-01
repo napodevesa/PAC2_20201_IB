@@ -3,31 +3,50 @@ package edu.uoc.pac2;
 
 public class Station {
 	private int id;
-	private int nextId = 0;
+	private static int nextId = 0;
 	private String name = "Default";
 	private String street = "Sesame Street";
-	private float latitude = 0;
-	private float longitude = 0;
+	private double latitude = 0;
+	private double longitude = 0;
 	private int capacity = 24;
 	
 	
-	
-	public Station( String name, String street, double latitude, int longitude, int capacity) {
+
+	public Station( String name, String street, double latitude, double longitude, int capacity) {
 		// TODO Auto-generated constructor stub
 		
+		setId(nextId++);
+		setName(name);
+		setStreet(street);
+		setLatitude(latitude);
+		setLongitude(longitude);
+		setCapacity(capacity);
+		
+		/*
+		this.id= id;
 		this.name = name;
 		this.street = street;
-		this.latitude = (float) latitude;
+		this.latitude =  latitude;
 		this.longitude = longitude;
 		this.capacity = capacity;
 		
-		setId(++nextId);
+		setId(nextId++);
+		//nextId++;
 	
+	*/
+		
 	}
+
 
 
 	public Station() {
 		// TODO Auto-generated constructor stub
+		setId(nextId++);
+		setName(name);
+		setStreet(street);
+		setLatitude(latitude);
+		setLongitude(longitude);
+		setCapacity(capacity);
 	}
 
 
@@ -37,6 +56,7 @@ public class Station {
 	}
 	
 	public void setId(int id) {
+		//this.id = nextId++ ;
 		this.id = id ;
 	}
 	
@@ -55,7 +75,7 @@ public class Station {
 	
 	public float getLatitude() {
 		
-		return latitude;
+		return (float) latitude;
 	}
 	
 	
@@ -74,7 +94,7 @@ public class Station {
 	//longitude
 	
 	public float getLongitude() {
-		return longitude;
+		return (float) longitude;
 	}
 	
 	public void setLongitude(double longitude) {
@@ -123,16 +143,14 @@ public class Station {
 
 	//nextId
 	
-	
-	public int getNextId() {
+	public static int getNextId() {
 		return nextId;
 	}
 
 	public void setNextId(int nextId) {
 		
-		this.nextId = nextId ;
+		Station.nextId = nextId ;
 	}
-	
 
 	
 }
