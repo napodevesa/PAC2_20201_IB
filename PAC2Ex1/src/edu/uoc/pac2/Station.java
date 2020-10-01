@@ -14,8 +14,16 @@ public class Station {
 	
 	
 	
-	public Station(String string, String string2, double d, int i, int j) {
+	public Station( String name, String street, double latitude, int longitude, int capacity) {
 		// TODO Auto-generated constructor stub
+		
+		
+		this.name = name;
+		this.street = street;
+		this.latitude = (float) latitude;
+		this.longitude = longitude;
+		this.capacity = capacity;
+	
 	
 	}
 
@@ -33,7 +41,6 @@ public class Station {
 		this.id = getNextId(id) ;
 	}
 	
-	//name
 	
 	
 	//street
@@ -109,7 +116,8 @@ public class Station {
 		return null;
 	}
 
-
+	//name 
+	
 	public String getName() {
 		return name;
 	}
