@@ -6,7 +6,7 @@ package edu.uoc.pac2;
 public class Station {
 	private int id;
 	private int nextId = 0;
-	private String name;
+	private String name = "Default";
 	private String street = "Sesame Street";
 	private float latitude = 0;
 	private float longitude = 0;
@@ -16,7 +16,6 @@ public class Station {
 	
 	public Station(String string, String string2, double d, int i, int j) {
 		// TODO Auto-generated constructor stub
-	
 	
 	}
 
@@ -35,22 +34,7 @@ public class Station {
 	}
 	
 	//name
-	public String getName(String name) {
-		 
-		return name;
-	}
 	
-	public void setName(String name) {
-		
-		if (name.length()> 0 && name.length() <= 50) {
-		
-		this.name = name;
-		}else {
-			
-			System.out.println("[ERROR] Station's name cannot "
-					+ "be longer than 50 characters]");			
-		}
-	}
 	
 	//street
 	
@@ -117,6 +101,32 @@ public class Station {
 	}
 
 
+
+
+
+	public static Integer getNextId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		if ( name.length() > 50) {
+			System.out.println("[ERROR] Station's name cannot "
+					+ "be longer than 50 characters");	
+				
+		}else {
+			
+			this.name = name;
+		}
+
+
+	}
 	
 
 	
