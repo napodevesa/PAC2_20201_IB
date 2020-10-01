@@ -1,8 +1,6 @@
 package edu.uoc.pac2;
 
 
-
-
 public class Station {
 	private int id;
 	private int nextId = 0;
@@ -17,13 +15,13 @@ public class Station {
 	public Station( String name, String street, double latitude, int longitude, int capacity) {
 		// TODO Auto-generated constructor stub
 		
-		
 		this.name = name;
 		this.street = street;
 		this.latitude = (float) latitude;
 		this.longitude = longitude;
 		this.capacity = capacity;
-	
+		
+		setId(++nextId);
 	
 	}
 
@@ -37,8 +35,9 @@ public class Station {
 	public int getId() {
 		return id;
 	}
+	
 	public void setId(int id) {
-		this.id = getNextId(id) ;
+		this.id = id ;
 	}
 	
 	
@@ -72,6 +71,7 @@ public class Station {
 			
 	}
 	
+	//longitude
 	
 	public float getLongitude() {
 		return longitude;
@@ -86,6 +86,8 @@ public class Station {
 		}
 	}
 	
+	//capacity
+	
 	public int getCapacity() {
 		return capacity;
 	}
@@ -97,25 +99,8 @@ public class Station {
 					+ "be greater than 0");
 		}
 	}
-
-	public int getNextId(int id2) {
-		id2++;
-		return id2;
-	}
-
-	public void setNextId(int nextId) {
-		this.nextId = nextId;
-	}
-
-
-
-
-
-	public static Integer getNextId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
+	
 	//name 
 	
 	public String getName() {
@@ -134,6 +119,18 @@ public class Station {
 		}
 
 
+	}
+
+	//nextId
+	
+	
+	public int getNextId() {
+		return nextId;
+	}
+
+	public void setNextId(int nextId) {
+		
+		this.nextId = nextId ;
 	}
 	
 
