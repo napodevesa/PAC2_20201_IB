@@ -1,5 +1,7 @@
 package edu.uoc.pac2.strings;
 
+
+
 public class PAC2Ex4 {
 
 	public String reverseText(String text) {
@@ -36,9 +38,20 @@ public class PAC2Ex4 {
 		return count;
 	}
 	
+	
+	
 	public String capitalize(String text, int index) {		
 		//TODO
 		
+		if (index >= 1 && index < text.length()){ 
+		
+				String a = text.substring(0, index); 
+				String r = text.substring(index, text.length()); 
+				String s = a.toUpperCase();
+				
+				return s+r;
+		}
+	
 		if (text == null){             
 
 	        return null;
@@ -53,8 +66,10 @@ public class PAC2Ex4 {
 		
 			return text.toUpperCase();
 		
-		}  
-		return text;
+		}
+		return text;  
+		
+	
 	}
 
 }
